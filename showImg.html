@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="height = device-height,
+                   width = device-width,
+                   initial-scale = 1.0,
+                   user-scalable = no" />
+    <title>保存图片</title>
+    <script src="jquery-2.1.4.min.js" type="text/javascript"></script>
+    <style>
+        * {
+            padding: 0;
+            margin:0;
+        }
+        html,body {
+            height:100%;
+            width:100%;
+            font-family: "微软雅黑","黑体","Adobe Arabic";
+            color: #A9A9A9;
+        }
+        body{
+            /*background: url("image/bgi.png");*/
+            background-color: #EBEBEB;
+        }
+        #mainImg{
+            width: 90vw;
+            margin: 5vw 0 5vw 5vw;
+            box-shadow: #A9A9A9 0 0 25px;
+            border-radius: 5px;
+        }
+        .mainTitle{
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        #closeBtn{
+            position: absolute;
+            width: 10vw;
+            height: 10vw;
+            bottom: 5vw;
+            left: 45vw;
+        }
+    </style>
+</head>
+<body>
+    <img id="mainImg" src="">
+    <p class="mainTitle">上图是您的杰作，您可以自行保存</p>
+    <img id="closeBtn" src="image/close.png">
+</body>
+<script>
+    $(function(){
+        $("#mainImg").attr("src",sessionStorage.drawImgSrc);
+        if("ontouchend" in document)
+            $("#closeBtn").on("touchend",closeWin);
+        else
+            $("#closeBtn").on("click",closeWin);
+    });
+    function closeWin(){
+        history.go(-1);
+    }
+</script>
+</html>

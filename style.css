@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin:0;
+    border:0;
+}
+html,body {
+    height:100%;
+    width:100%;
+}
+body {
+    position: relative;
+}
+.mune_box {
+    margin: auto;
+    width:100%;
+    background-color: #F5F5F5;
+}
+.bottom {
+    position: fixed;
+    float: bottom;
+    bottom :0;
+}
+.canvasdiv
+{
+    position: relative;
+    display: block;
+    width:100%;
+    height: 100%;
+}
+.saveBtn{
+    position: absolute;
+    height: 30px;
+    width: 50px;
+}
+#canvas,#canvasNull
+{
+    position: absolute;
+    height:100%;
+    width:100%;
+}
+.out_box
+{
+    width: 100%;
+    height:40px;
+    background-color: #F5F5F5;
+    border-top:1px solid #DCDCDC;
+}
+.color_box
+{
+    position: relative;
+    float: left;
+    margin:8px auto 0 auto;
+}
+.color_botton
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+.color_botton:hover
+{
+    box-shadow: #A9A9A9 0 0 10px;
+    cursor: pointer;
+}
+.color_botton_click
+{
+    position: relative;
+    border:2px solid #e5e5e5;
+    margin-top: -1px;
+}
+.l6
+{
+    width:14.5%
+}
+.l7
+{
+    width:14.285%
+}
+#color1
+{
+    background-color: #DC143C;
+}
+#color2
+{
+    background-color: #F4A460;
+}
+#color3
+{
+    background-color: #F0E68C;
+}
+#color4
+{
+    background-color: #9ACD32;
+}
+#color5
+{
+    background-color: #87CEFA;
+}
+#color6
+{
+    background-color: #9932CC;
+}
+#color7
+{
+    background-color: #000000;
+}
+.pen_tool
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 19px;
+    left:50%;
+    margin-left:-17px;
+    margin-top: -4px;
+    opacity: 0.7;
+}
+.pen_tool:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+.pen_tool_click
+{
+    border-style:solid;
+    border-width: 2px;
+    border-color:#ed7d6f;
+    margin-top: -5px;
+    opacity: 1;
+}
+.mainBtn{
+    float: left;
+    width: 13%;
+    text-align: center;
+}
+.mainBtn img{
+    width: 40px;
+    padding: 2px;
+    border-top: 1px solid #DCDCDC;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    margin: -21.5px 0 0 -1.5px;
+}
+#canvasNull{
+    display: none;
+}
+#newimg{
+    position: absolute;
+    width: 70px;
+    right: 0;
+    top: 0;
+}
+@media screen and (min-width: 500px)
+{
+    .mune_box
+    {
+        width: 500px;
+    }
+}
